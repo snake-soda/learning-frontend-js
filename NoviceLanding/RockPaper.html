@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock,Paper,Scissors</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+        <div class="Header-Logo">Header Logo</div>
+        </a>
+        <a href="mathScript.html">
+        <div class="Menu-One">Mathematics</div>
+        </a>
+        <a href="RockPaper.html">
+        <div class="Menu-Two">Rock, Paper, Scissors</div>
+        </a>
+        <div class="Menu-Three">Menu Three</div>
+    </div>
+
+    <div class="mathsection">
+        <h1>This box knows how to add</h1>
+            <br/>
+            <input type="text" placeholder="Ugh yes, put a number in me..." id="userInput">
+            <button type="button" onclick="getAdditiveValue();">Add 7</button>
+
+            <script>
+                function getAdditiveValue(){
+                    let inputVal = document.getElementById("userInput").value;
+                    let inputNum = parseInt(inputVal)
+                    let sum = inputNum + 7;
+
+                    alert(sum);
+                }
+            </script>
+</body>
+</html>

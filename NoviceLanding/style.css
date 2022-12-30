@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(40, 40, 41);
+}
+
+a{
+    color: azure;
+}
+
+a:hover{
+    color: aquamarine;
+}
+
+.header{
+    color: azure;
+    flex: 1;
+    gap: 28px;
+    justify-content: right;
+    padding-right: 50px;
+    padding-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+}
+
+.Header-Logo{
+    color: aquamarine;
+    padding-left: 150px;
+    margin-right: 1000px;
+    flex: auto;
+}
+
+.mainfeature{
+    color: azure;
+    margin: 10%;
+    display: flex;
+}
+
+.mainfeature > img{
+    width: 450px;
+    height: auto;
+    padding-left: 50px;
+}
+
+.mathsection{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mathsection > h1{
+    color: aliceblue;
+    margin: 15px;
+}
+
+.mathsection > input{
+    width: 300px;
+    height: 50px;
+    margin: 15px;
+}
+
+.mathsection > button{
+    width: 100px;
+    height: 60px;
+    margin: 20px;
+}
+
+.features{
+    background-color: rgb(117, 132, 129);
+    text-align: center;
+}
+
+.features > h1{
+    padding-top: 30px;
+}
+
+.boxcontainer{
+    color: aliceblue;
+    justify-content: center;
+    display: flex;
+}
+
+.featurebox{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.textcontainer{
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    display: flex;
+}
+
+.textbox{
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.testimonial{
+    background-color: rgb(94, 112, 106);
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.testimonial > p{
+    width: 700px;
+    height: auto;
+    padding-top: 40px;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+.calltoaction{
+    background-color: rgb(117, 132, 129);
+    justify-content: center;
+    display: flex;
+}
+
+.callcontainer{
+    width: 900px;
+    height: auto;
+    color: azure;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(66, 62, 89);
+    border-radius: 15px;
+    margin: 40px;
+    padding: 20px;
+    padding-left: 40px;
+    display: flex;
+}
+
+.callbutton{
+    width: 250px;
+    height: 30px;
+    border: 1px solid azure;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 100px;
+}
+
+.footer{
+    text-align: center;
+    color: azure;
+}
