@@ -21,19 +21,24 @@
         <div class="Menu-Three">Menu Three</div>
     </div>
 
-    <div class="mathsection">
-        <h1>This box knows how to add</h1>
+    <div class="rps">
+        <h1>Choose wisely...</h1>
             <br/>
-            <input type="text" placeholder="Ugh yes, put a number in me..." id="userInput">
-            <button type="button" onclick="getAdditiveValue();">Add 7</button>
+            <button type="button" id="rock" onclick="displayResult(event);">Rock</button>
+            <button type="button" id="paper" onclick="displayResult(event);">Paper</button>
+            <button type="button" id="scissors" onclick="displayResult(event);">Scissors</button>
 
             <script>
-                function getAdditiveValue(){
-                    let inputVal = document.getElementById("userInput").value;
-                    let inputNum = parseInt(inputVal)
-                    let sum = inputNum + 7;
+                function displayResult(event){
+                    let clickedButton = event.target;
 
-                    alert(sum);
+                    if (clickedButton.id === "rock"){
+                        alert("Rock vs Paper! You've lost!");
+                    }else if (clickedButton.id === "paper"){
+                        alert("Paper vs Rock! You've won!");
+                    }else if (clickedButton.id === "scissors"){
+                        alert("Scissors vs Scissors! You're a fruit!");
+                    }
                 }
             </script>
 </body>
