@@ -29,7 +29,7 @@ a:hover{
 .Header-Logo{
     color: aquamarine;
     padding-left: 150px;
-    margin-right: 1000px;
+    margin-right: 700px;
     flex: auto;
 }
 
@@ -93,6 +93,7 @@ a:hover{
 
 .features > h1{
     padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .boxcontainer{
