@@ -1,7 +1,11 @@
+/*Wipes away browser defaults to avoid conflicts when styling other elements*/
+
 *{
     margin: 0;
     padding: 0;
 }
+
+/*General Styling*/
 
 body{
     background-color: rgb(40, 40, 41);
@@ -14,6 +18,8 @@ a{
 a:hover{
     color: aquamarine;
 }
+
+/*Header & Footer*/
 
 .header{
     color: azure;
@@ -32,6 +38,14 @@ a:hover{
     margin-right: 700px;
     flex: auto;
 }
+
+.footer{
+    text-align: center;
+    color: azure;
+    padding: 20px;
+}
+
+/*Main Page (index.html)*/
 
 .mainfeature{
     color: azure;
@@ -86,6 +100,7 @@ a:hover{
     height: 60px;
     margin: 20px;
 }
+
 .features{
     background-color: rgb(117, 132, 129);
     text-align: center;
@@ -175,10 +190,4 @@ a:hover{
     margin-top: 40px;
     margin-left: 200px;
     margin-right: 100px;
-}
-
-.footer{
-    text-align: center;
-    color: azure;
-    padding: 20px;
 }
