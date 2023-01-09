@@ -51,54 +51,15 @@ a:hover{
     color: azure;
     margin: 10%;
     display: flex;
+    height: 150px;
 }
 
 .mainfeature > img{
-    width: 450px;
+    width: auto;
     height: auto;
     padding-left: 50px;
-}
-
-.mathsection{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mathsection > h1{
-    color: aliceblue;
-    margin: 15px;
-}
-
-.mathsection > input{
-    width: 300px;
-    height: 50px;
-    margin: 15px;
-}
-
-.mathsection > button{
-    width: 100px;
-    height: 60px;
-    margin: 20px;
-}
-
-.rps{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.rps > h1{
-    color: aliceblue;
-    margin: 15px;
-}
-
-.rps > button{
-    width: 100px;
-    height: 60px;
-    margin: 20px;
+    position: relative;
+    bottom: 30px;
 }
 
 .features{
@@ -191,3 +152,74 @@ a:hover{
     margin-left: 200px;
     margin-right: 100px;
 }
+
+/*Math Page (mathScript.html)*/
+
+.mathsection{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mathsection > h1{
+    color: aliceblue;
+    margin: 15px;
+}
+
+.mathsection > input{
+    width: 300px;
+    height: 50px;
+    margin: 15px;
+}
+
+.mathsection > button{
+    width: 100px;
+    height: 60px;
+    margin: 20px;
+}
+
+/*Rock, Paper, Scissors Page (RockPaper.html)*/
+
+.rps{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rps > h1{
+    color: aliceblue;
+    margin: 15px;
+}
+
+.rps > button{
+    width: 100px;
+    height: 60px;
+    margin: 20px;
+}
+
+/*Launch Countdown Page (countdown.html)*/
+
+.countdown{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown > h1{
+    color: aliceblue;
+    margin: 15px;
+}
+
+.countdown > button{
+    width: 100px;
+    height: 60px;
+    margin: 20px;
+}
+
+#launchOutput {
+    color: aliceblue;
+}
+
