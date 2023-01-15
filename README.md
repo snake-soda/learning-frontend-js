@@ -1,2 +1,2 @@
-# learning-frontend-js
-This repo contains files I've used to experiment and learn HTML, CSS, &amp; JavaScript
+# vanilla-shack
+A website that serves as a playground for learning Vanilla HTML, CSS, &amp; JavaScript
