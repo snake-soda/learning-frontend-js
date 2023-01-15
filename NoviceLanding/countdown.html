@@ -28,15 +28,26 @@
 
     </div>
 
-    <div class="rps">
+    <div class="countdown">
         <h1>Our trip will commence in...</h1>
             <br/>
-            <button type="button" id="launch" onclick="displayResult(event);">Click to Launch</button>
+            <button type="button" id="launchBtn" onclick="displayResult(event);">Click to Launch</button>
 
-            <div id="launchOutput">hello</div>
+            <div id="launchOutput"></div>
     
             <script>
-                const output = document.querySelector('.output');
+
+                function displayResult(event){
+                    let clickedButton = event.target;
+
+                    if (clickedButton.id === "launchBtn"){
+                        launch()
+                    }
+                }
+
+                function launch(){
+
+                const output = document.getElementById("launchOutput");
                 output.innerHTML = '';
 
                 let i = 10;
@@ -44,9 +55,9 @@
                 while (i >= 0) {
                     const para = document.createElement('p');
                     if (i === 10) {
-                        para.textContent = `Countdown ${i}`;
+                        para.textContent = `${i}`;
                     } else if (i === 0) {
-                        para.textContent = 'Blast off!';
+                        para.textContent = 'POW! BOOM! WOOSH!';
                     } else {
                         para.textContent = i;
                     }
@@ -55,14 +66,8 @@
 
                     i--;
                 }
+            }
 
-                function displayResult(event){
-                    let clickedButton = event.target;
-
-                    if (clickedButton.id === "launch"){
-                        
-                    }
-                }
             </script>
     </div>
 </body>
