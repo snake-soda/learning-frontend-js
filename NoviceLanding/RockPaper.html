@@ -8,7 +8,9 @@
     <title>Rock,Paper,Scissors</title>
 </head>
 <body>
-    <div class="header">
+
+    <!-- Header and Nav Bar-->
+    <header class="header">
 
         <a href="index.html"><img src="images/MoonSage.png" width="50px" height="auto">
         <div class="Header-Logo"></div>
@@ -25,28 +27,62 @@
         <a href="countdown.html">
         <div class="Menu-Three">Launch Countdown</div>
         </a>
+
+        <a href="drumKit.html">
+        <div class="Menu-Four">Drum Kit</div>
+        </a>
         
+    </header>
+
+<!--Game Display-->
+    <main class="rps-main">
+        <h1>Rock. Paper. Scissors.</h1>
+
+        <div class="scoreboard">
+            <h2 class="score-info" id="scoreInfo">Choose your weapon</h2>
+            <h3 class="score-message" id="scoreMessage">
+                First to score 5 points wins the game
+            </h3>
+        </div>
+
+        <div class="scores-container">
+
+            <div class="score-box">
+                <div class="sign" id="playerSign">❔</div>
+                <p class="score" id="playerScore">Player:0</p>
+            </div>
+
+            <div class="score-box">
+                <div class="sign" id="computerSign">❔</div>
+                <p class="score" id="computerScore">Player:0</p>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="btn btn-square" id="rockBtn">
+                <div class="sign">✊</div>
+            </button>
+
+            <button class="btn btn-square" id="paperBtn">
+                <div class="sign">✋</div>
+            </button>
+
+            <button class="btn btn-square" id="scissorsBtn">
+                <div class="sign">✌</div>
+            </button>
+
+        </div>
+    </main>
+
+    <div class="modal" id="endgameModal">
+        <p class="modal-title" id="endgameMsg"></p>
+        <button class="btn btn-restart" id="restartBtn">Play again</button>
     </div>
+    <div class="overlay" id="overlay"></div>
+    
+    <script src="rockpaper.js"></script>
 
-    <div class="rps">
-        <h1>Choose wisely...</h1>
-            <br/>
-            <button type="button" id="rock" onclick="displayResult(event);">Rock</button>
-            <button type="button" id="paper" onclick="displayResult(event);">Paper</button>
-            <button type="button" id="scissors" onclick="displayResult(event);">Scissors</button>
-
-            <script>
-                function displayResult(event){
-                    let clickedButton = event.target;
-
-                    if (clickedButton.id === "rock"){
-                        alert("Rock vs Paper! You've lost!");
-                    }else if (clickedButton.id === "paper"){
-                        alert("Paper vs Rock! You've won!");
-                    }else if (clickedButton.id === "scissors"){
-                        alert("Scissors vs Scissors! You're a fruit!");
-                    }
-                }
-            </script>
 </body>
 </html>

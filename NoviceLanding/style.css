@@ -15,6 +15,11 @@ a{
     color: azure;
 }
 
+button{
+    border: none;
+    cursor: pointer;
+}
+
 a:hover{
     color: aquamarine;
 }
@@ -29,12 +34,12 @@ a:hover{
     padding-right: 50px;
     padding-top: 30px;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
     display: flex;
 }
 
 .Header-Logo{
     color: aquamarine;
-    padding-left: 150px;
     margin-right: 700px;
     flex: auto;
 }
@@ -45,6 +50,8 @@ a:hover{
     padding: 20px;
 }
 
+/*Side Navigator*/
+
 .sidenav{
     display: flex;
     position: absolute;
@@ -54,7 +61,7 @@ a:hover{
     width: 60px;
     height: 300px;
     margin-top: 40px;
-    margin-left: 10px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -81,8 +88,9 @@ a:hover{
 }
 
 .features{
-    background-color: rgb(117, 132, 129);
+    background-color: rgb(211, 205, 196);
     text-align: center;
+    color: grey;
 }
 
 .features > h1{
@@ -91,7 +99,6 @@ a:hover{
 }
 
 .boxcontainer{
-    color: aliceblue;
     justify-content: center;
     display: flex;
 }
@@ -105,7 +112,7 @@ a:hover{
 }
 
 .textcontainer{
-    color: rgb(0, 0, 0);
+    color: rgb(32, 32, 32);
     justify-content: center;
     display: flex;
 }
@@ -119,7 +126,7 @@ a:hover{
 }
 
 .testimonial{
-    background-color: rgb(94, 112, 106);
+    background-color: rgb(62, 81, 75);
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -199,22 +206,83 @@ a:hover{
 
 /*Rock, Paper, Scissors Page (RockPaper.html)*/
 
-.rps{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+:root {
+    --secondary-dark: #393e46;
+    --secondary-dark-hover: #4a4f57;
+    --secondary-dark-active: #5b5f68;
 }
 
-.rps > h1{
+.rps-main{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.rps-main > h1,h2,h3,p{
     color: aliceblue;
     margin: 15px;
 }
 
-.rps > button{
-    width: 100px;
-    height: 60px;
-    margin: 20px;
+.scoreboard {
+    margin-bottom: 15 px;
+}
+
+.scoreinfo {
+    font-size: 32px;
+}
+
+.score-message {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.scores-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    padding: 10px;
+    margin: auto;
+}
+
+.score-box {
+    width: 170px;
+}
+
+.score {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: var(--secondary-dark);
+}
+
+.btn-square {
+    width: 160px;
+    height: 160px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-dark-hover);
+}
+
+.btn:active {
+    background-color: var(--secondary-dark-active);
+}
+
+.sign {
+    font-size: 70px;
+    margin-bottom: 10px;
 }
 
 /*Launch Countdown Page (countdown.html)*/
