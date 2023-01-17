@@ -49,7 +49,7 @@ function isGameOver() {
     return playerScore === 5 || computerScore === 5
 }
 
-//Let's assign JavaScript constants to their corresponding DOM elements
+//Assign JavaScript constants to their corresponding DOM elements
 
 const scoreInfo = document.getElementById('scoreInfo')
 const scoreMessage = document.getElementById('scoreMessage')
@@ -64,4 +64,85 @@ const endgameModal = document.getElementById('endgameModal')
 const endgameMsg = document.getElementById('endgameMsg')
 const overlay = document.getElementById('overlay')
 const restartBtn = document.getElementById('restartBtn')
+
+//Listen for clicks and execute corresponding functions
+
+rockBtn.addEventListener('click', () => handleClick('ROCK'))
+paperBtn.addEventListener('click', () => handleClick('PAPER'))
+scissorsBtn.addEventListener('click', () => handleClick('SCISSORS'))
+restartBtn.addEventListener('click', restartGame)
+overlay.addEventListener('click', closeEndgameModal)
+
+function handleClick(playerSelection) {
+    if (isGameOver()) {
+        openEndgameModal()
+        return
+    }
+
+    const computerSelection = getRandomChoice()
+    playRound(playerSelection, computerSelection)
+    updateChoices(playerSelection, computerSelection)
+    updateScore()
+
+    if (isGameOver()) {
+        openEndgameModal()
+        setFinalMessage()
+    }
+}
+
+function updateChoices(playerSelection, computerSelection) {
+    switch (playerSelection) {
+        case 'ROCK':
+            playerSign.textContent = '✊'
+            break
+        case 'PAPER':
+            playerSign.textContent = '✋'
+            break
+        case 'SCISSORS':
+            playerSign.textContent = '✌'
+            break
+    }
+
+    switch (computerSelection) {
+        case 'ROCK':
+            computerSign.textContent = '✊'
+            break
+        case 'PAPER':
+            computerSign.textContent = '✋'
+            break
+        case 'SCISSORS':
+            computerSign.textContent = '✌'
+            break
+    }
+}
+
+function updateScore() {
+    if (roundWinner === 'tie') {
+        scoreInfo.textContent = "It's a tie!"
+    } else if (roundWinner === 'player') {
+        scoreInfo.textContent = 'You won!'
+    } else if (roundWinner === 'computer') {
+        scoreInfo.textContent = 'You lost!'
+    }
+
+    playerScorePara.textContent = `Player: ${playerScore}`
+    computerScorePara.textContent = `Computer: ${computerScore}`
+}
+
+function updateScoreMessage(winner, playerSelection, computerSelection) {
+    if (winner === 'player') {
+        scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} beats
+        ${computerSelection.toLowerCase()}`
+        return
+    }
+    if (winner === 'computer') {
+        scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} is beaten by
+        ${computerSelection.toLowerCase()}`
+        return
+    }
+
+    scoreMessage.textContent = `${capitalizeFirstLetter(playerSelection)} ties with 
+    ${computerSelection.toLowerCase()}`
+}
+
 
