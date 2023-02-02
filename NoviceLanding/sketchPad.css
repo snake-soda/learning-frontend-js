@@ -1,0 +1,82 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var();
+    color: var(--primary-light);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+button,
+input {
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Header */
+
+.header {
+    padding: 30px 0;
+}
+
+title {
+    text-align: center;
+    font-size: 80px;
+}
+
+/* Main */
+
+.sketchPadMain {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+}
+
+button.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-dark);
+}
+
+button,
+input[type='color']:hover {
+    transform: scale(1.05);
+}
